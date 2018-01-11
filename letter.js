@@ -19,4 +19,16 @@ exports.display = function(){
 		}
 	};
 }
+//updates what the user has guessed
+exports.displayGuess = function(){
+	guess = "";
+	for(var i = 0; i <exports.guessArry.length; i++){
+		guess += exports.guessArry[i]+" ";
+	}
+	console.log(guess);
+};
 
+//changes the guess array when a letter is guessed
+exports.editArray = function(position, letter){
+	exports.guessArry[position] = letter; 
+};
