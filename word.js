@@ -23,3 +23,28 @@ exports.checker = function(){
 
 }; 
 
+//function to check if the letter exists
+exports.wordCheck = function(){
+	var guess = main.wordGuess;
+	var word = main.chosenWord;
+	var isNotEqual; 
+
+	for(var k = 0; k<word.length; k++){
+		if(guess[k] != word[k]){
+			isNotEqual = false; 
+		}
+		else{
+			isNotEqual = true; 
+		}
+	}
+
+	if(isNotEqual == true){
+		console.log("Correct");
+		main.playAgain();
+	}
+	else{
+		console.log("Incorrect");
+		main.lives++;
+		main.requestInfo();
+	}
+};
