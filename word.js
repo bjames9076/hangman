@@ -15,7 +15,7 @@ exports.checker = function(){
 			detected++;
 		}
 	}
-	letter.displayWord();
+	letter.displayGuess();
 	if(detected == 0){
 		main.lives++; 
 	}
